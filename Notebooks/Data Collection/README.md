@@ -1,16 +1,3 @@
----
-title: "YouTube Channel Data Scraping Analysis"
-author: "Data Analysis Report"
-date: "`r Sys.Date()`"
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    theme: cosmo
-    highlight: tango
-    code_folding: show
----
-
 # Overview
 
 This is a summary of a Python-based YouTube data scraping project that collected comprehensive data from major news channels using the YouTube Data API v3.
@@ -222,48 +209,8 @@ This dataset enables multiple research directions:
 6. **Temporal Patterns**: Analyze when channels post and when users engage
 
 ---
-
-# Recommendations for Future Enhancement
-
-## Code Improvements
-1. Implement exponential backoff for retries
-2. Add progress tracking and logging
-3. Store API key in environment variables
-4. Implement checkpoint/resume functionality
-5. Add data validation and cleaning steps
-
-## Analysis Extensions
-1. Expand time range to track trends over time
-2. Include video transcripts for content analysis
-3. Collect channel metadata changes over time
-4. Track specific topics or keywords
-5. Monitor recommendation algorithm patterns
-
----
-
 # Conclusion
 
 This Python script successfully demonstrates a comprehensive YouTube data collection pipeline, gathering multi-level data (channel, video, and comment) from major news outlets. The resulting dataset of 818 videos and 293,848 comments provides rich material for analyzing news media engagement patterns on YouTube.
 
 The implementation showcases best practices in API usage, including rate limiting, error handling, and efficient batch processing, making it a robust foundation for YouTube data research projects.
-
----
-
-# Appendix: Script Structure
-
-```
-Main Components:
-├── API Initialization
-│   └── get_youtube_service()
-├── Channel Statistics
-│   ├── get_channel_stats()
-│   └── save_channel_stats_to_csv()
-├── Video Collection
-│   ├── get_recent_videos()
-│   ├── scrape_all_channels()
-│   └── save_videos_to_csv()
-└── Comment Collection
-    ├── get_video_comments()
-    ├── scrape_comments_from_csv()
-    └── save_comments_to_csv()
-```

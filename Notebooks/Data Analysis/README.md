@@ -1,15 +1,3 @@
----
-title: "News Channel Performance Analysis"
-author: "Data Analytics Team"
-date: "`r Sys.Date()`"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
-    theme: united
-    code_folding: hide
----
-
 ## Summary
 The approach to our analyis starts with a birds-eye view from the channel level based on historical subscription data before the video level analysis focusing on October 2025 performance metrics. The channel-level analysis examines subscriber base, total views distribution, followed by the October-specific video-level analysis that delves into engagement metrics including views, likes, comments, and content duration investigating influence and the sentiments underlying them both from the perspective of a producer and consumer of the content.
 
@@ -24,13 +12,13 @@ The subscriber analysis orders channels by their first publication date, providi
 - Established channels (earlier publication dates) may show different subscriber patterns compared to newer entrants
 
 Subscriber counts for each channel, ordered by publication timeline
-
-![alt text](<../Figures/Subscribers per Channel.png>)
+![alt text](<../../Outputs/Figures/Subscribers per Channel.png>)
 
 - **Absolute Views**: Bar chart showing total view counts per channel
-![alt text](<../Figures/Total Views per Channel.png>)
+![alt text](<../../Outputs/Figures/Total Views per Channel.png>)
+
 - **Relative Share**: Pie chart illustrating each channel's percentage contribution to overall viewership
-![alt text](<../Figures/Share of Total Views per Channel.png>)
+![alt text](<../../Outputs/Figures/Total Views per Channel.png>)
 
 ### Insights
 - View distribution reveals which channels command the largest audience share
@@ -106,7 +94,7 @@ Videos were ranked by scaled influence to identify:
 ```python
 sns.boxplot(x="Channel", y="Influence_scaled", data=df, palette="Set2")
 ```
-![alt text](<../Figures/Scaled Influence.png>)
+![alt text](<../../Outputs/Figures/Scaled Influence.png>)
 **Reveals:**
 
 - Median influence per channel
@@ -122,7 +110,7 @@ half_total = channel_influence / 2
 neg_half = -half_total  # left side
 pos_half = half_total   # right side
 ```
-![alt text](<../Figures/Channel Bars.png>)
+![alt text](<../../Outputs/Figures/Channel Bars.png>)
 **Purpose:** Emphasizes relative magnitude while maintaining visual balance
 
 ---
@@ -136,7 +124,7 @@ Duration was analyzed on a **log scale** due to extreme variability (shorts vs. 
 df["Duration_minutes"] = df["Duration_seconds"] / 60
 plt.yscale("log")
 ```
-![alt text](<../Figures/Duration Distribution.png>)
+![alt text](<../../Outputs/Figures/Duration Distribution.png>)
 ### 3.2 Box Plot Visualization
 
 Multi-colored box plots reveal:
@@ -246,7 +234,7 @@ Grouped bar plot showing count of videos per sentiment per channel:
 sns.barplot(data=channel_sentiment_counts, 
             x='Channel', y='count', hue='sentiment')
 ```
-![alt text](<../Figures/Sentiment Counts by Channel.png>)
+![alt text](<../../Outputs/Figures/Sentiment Counts by Channel.png>)
 ## 6. Emotion Classification
 
 ### 6.1 Beyond Sentiment: Granular Emotions
@@ -311,13 +299,13 @@ sentiment_influence = (
 - Color-coded by sentiment (red=negative, gray=neutral, green=positive)
 - Ranked by total influence
 
-![alt text](<../Figures/Influence Bars by Sentiment.png>)
+![alt text](<../../Outputs/Figures/Influence Bars by Sentiment.png>)
 
 **2. Box Plot Distribution**
 ```python
 sns.boxplot(data=df, x='sentiment', y='Influence_scaled', palette='Set2')
 ```
-![alt text](<../Figures/Video Influence by Sentiment.png>)
+![alt text](<../../Outputs/Figures/Video Influence by Sentiment.png>)
 Shows distribution of influence within each sentiment category
 
 # Conclusion
