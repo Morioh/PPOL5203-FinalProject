@@ -18,7 +18,7 @@ ABC News • CBS News • CNN • Fox News • NBC News • The New York Times �
 - **Influence Scoring**: Custom metric weighing engagement depth and reach
 - **Sentiment Analysis**: RoBERTa-based classification (Negative/Neutral/Positive)
 - **Topic Modeling**: BERTopic for identifying channel-specific themes
-- 
+
 ## 📁 Project Structure
 ```
 PPOL5203-FinalProject/

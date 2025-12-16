@@ -306,6 +306,7 @@ sentiment_influence = (
 sns.boxplot(data=df, x='sentiment', y='Influence_scaled', palette='Set2')
 ```
 ![alt text](<../../Outputs/Figures/Video Influence by Sentiment.png>)
+
 Shows distribution of influence within each sentiment category
 
 # Conclusion
