@@ -19,28 +19,33 @@ ABC News • CBS News • CNN • Fox News • NBC News • The New York Times �
 - **Sentiment Analysis**: RoBERTa-based classification (Negative/Neutral/Positive)
 - **Topic Modeling**: BERTopic for identifying channel-specific themes
 
-## 📁 Project Structure
+## Project Structure
 ```
-PPOL5203-FinalProject/
-Data/
-1. raw/
+PPOL5203-FinalProject
+
+Data
+1. raw
 - october_videos.csv
 - news_channel_stats.csv
 - october_video_comments.csv
-2. processed/
+
+2. processed
 - channel_themes.csv
 - titles_with_sentiment.csv
-3. Notebooks/
+
+3. Notebooks
 - Data Collection
 - Channel_Data_Scrapping.ipynb
 - README.md
+
 4. Data Analysis
 -Channel_Analysis.ipynb
 -Video_Text_Analysis.ipynb
 - Video_Title_Analysis.ipynb
 -README.md
-5. Outputs/
-- figures/
+
+5. Outputs
+- figures
 - README.md
 ```
 
@@ -50,7 +55,7 @@ Data/
 
 Python 3.8+ / YouTube Data API key / 8GB RAM (16GB recommended) / GPU optional (speeds up transformer models)
 
-## 🔄 Reproducibility
+## Reproducibility
 
 - **Step 1**: Data Collection
 - **Step 2**: Performance Analysis
@@ -84,9 +89,9 @@ Influence_scaled = log(1 + Influence)
 
 ## Key Findings
 
-- ✅ **Neutral titles and negative comments dominates** across all channels (85%+ of videos)
-- ✅ **Clear influence hierarchy** with distinct engagement patterns
-- ✅ **Channel-specific topics** reflect editorial focus areas
-- ✅ **Video duration** varies significantly by channel strategy
+-  **Neutral titles and negative comments dominates** across all channels (85%+ of videos)
+-  **Clear influence hierarchy** with distinct engagement patterns
+-  **Channel-specific topics** reflect editorial focus areas
+-  **Video duration** varies significantly by channel strategy
 
 **Note**: This project is for research and educational purposes.
